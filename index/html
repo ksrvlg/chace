@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denim Dynasty - Premium Jeans</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Denim Dynasty</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+        <li><a href="#products" class="hover:text-blue-300">Products</a></li>
+        <li><a href="#about" class="hover:text-blue-300">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc22f8?q=80&w=2072&auto=format&fit=crop')">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto h-full flex items-center justify-center text-center text-white">
+      <div>
+        <h2 class="text-5xl font-bold mb-4">Discover Your Perfect Pair</h2>
+        <p class="text-xl mb-6">Premium jeans crafted for style and comfort.</p>
+        <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Jeans Collection</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1602293589930-45aad59ba4ab?q=80&w=1974&auto=format&fit=crop" alt="Slim Fit Jeans" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Slim Fit Jeans</h3>
+            <p class="text-gray-600 mb-4">$59.99</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1974&auto=format&fit=crop" alt="Relaxed Fit Jeans" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Relaxed Fit Jeans</h3>
+            <p class="text-gray-600 mb-4">$64.99</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=2070&auto=format&fit=crop" alt="High-Waisted Jeans" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">High-Waisted Jeans</h3>
+            <p class="text-gray-600 mb-4">$69.99</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-200 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">About Denim Dynasty</h2>
+      <p class="text-lg max-w-2xl mx-auto">At Denim Dynasty, we believe in crafting jeans that combine timeless style with modern comfort. Our jeans are made from premium materials, designed to fit every body type, and built to last.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+      <p class="text-lg mb-6">Have questions? Reach out to us!</p>
+      <div class="max-w-md mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded">
+        <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded">
+        <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded h-32"></textarea>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Denim Dynasty. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-blue-300 mx-2">Facebook</a>
+        <a href="#" class="text-blue-300 mx-2">Instagram</a>
+        <a href="#" class="text-blue-300 mx-2">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Add to Cart Alert -->
+  <script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
